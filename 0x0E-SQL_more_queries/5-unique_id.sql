@@ -1,3 +1,8 @@
--- creates the table id_not_null on your MySQL server
--- creates a table
-CREATE TABLE IF NOT EXISTS id_not_null (id INT DEFAULT 1, name VARCHAR(256));
+-- Create table 'unique_id'
+-- id INT default 1 unique, name VARCHAR(256)
+-- If table already exists, script should not fail
+CREATE TABLE IF NOT EXISTS unique_id
+(
+	id INT DEFAULT 1 UNIQUE,
+	name VARCHAR(256)
+);
